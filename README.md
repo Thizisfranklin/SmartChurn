@@ -6,15 +6,6 @@ End-to-end machine learning project to predict **which bank customers are likely
 This project takes a real bank churn dataset from **raw → cleaned → explored → modeled → tuned → evaluated**.  
 The goal is to identify at-risk customers and compare multiple ML models, with a strong focus on **recall** (catching churners early) and handling **class imbalance** using SMOTE.
 
-## What This Shows (Skills)
-- Data cleaning & preprocessing (dropping IDs, encoding categoricals, scaling)
-- Exploratory Data Analysis (EDA) with visualizations
-- Model building with multiple algorithms (Logistic Regression, Random Forest, SVM, KNN)
-- Hyperparameter tuning with `GridSearchCV`
-- Class imbalance handling with **SMOTE**
-- Model evaluation and comparison (accuracy, precision, recall, F1, ROC-AUC)
-- Clear communication of trade-offs (precision vs recall in a business context)
-
 ## Workflow
 1. **Load & Explore Data** – inspect structure, churn rate, and class imbalance.  
 2. **EDA** – visualize churn by geography, gender, and key behavior features.  
