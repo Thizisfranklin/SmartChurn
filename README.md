@@ -1,36 +1,17 @@
-# Bank Customer Churn Prediction
+# SmartChurn
 
-End-to-end machine learning project to predict **which bank customers are likely to churn (leave)** using Python and Jupyter/Colab.
+A bank customer churn modeling exercise comparing classification models and the tradeoff between finding customers who leave and avoiding false alarms.
 
-## Project Overview
-This project takes a real bank churn dataset from **raw → cleaned → explored → modeled → tuned → evaluated**.  
-The goal is to identify at-risk customers and compare multiple ML models, with a strong focus on **recall** (catching churners early) and handling **class imbalance** using SMOTE.
+![Churn distribution](img_1.png)
 
 ## Workflow
-1. **Load & Explore Data** – inspect structure, churn rate, and class imbalance.  
-2. **EDA** – visualize churn by geography, gender, and key behavior features.  
-3. **Preprocessing** – drop non-predictive IDs, one-hot encode categoricals, scale numeric features.  
-4. **Modeling & Tuning** – train Logistic Regression, Random Forest, SVM, KNN and tune with `GridSearchCV`.  
-5. **Imbalance Handling** – apply **SMOTE** on the training set and re-evaluate models.  
-6. **Evaluation & Insights** – compare metrics, analyze feature importance, and summarize business implications.
 
-## Key Visuals (from the notebook)
+Explore churn patterns, preprocess customer features, compare logistic regression, random forest, SVM, and KNN, and evaluate class imbalance with SMOTE. The [notebook](Lab10_Osualaaham.ipynb) contains the full analysis and results.
 
-### Churn Distribution & Class Imbalance
-![EDA1](img_1.png)
+| Exploration | Model evaluation |
+|---|---|
+| ![Churn by customer features](img_2.png) | ![Model evaluation figure](img_3.png) |
 
-### Churn vs Key Features (e.g., Geography, Activity)
-![EDA2](img_2.png)
+**To reproduce:** Open the notebook in Colab with the source churn CSV. The CSV is not included in this repository; the exported script `lab10_osualaaham.py` uses a Colab-specific `/content/Churn (3).csv` path. Update that path for your environment.
 
-### Model Performance / Confusion Matrix
-![Model1](img_3.png)
-
-### Effect of SMOTE or ROC Curves
-![Model2](img_4.png)
-
-## Tech Stack
-- **Python**: pandas, numpy  
-- **Visualization**: matplotlib, seaborn  
-- **ML**: scikit-learn (LogisticRegression, RandomForest, SVM, KNN), imbalanced-learn (SMOTE)  
-- **Environment**: Jupyter / Google Colab  
-
+**Limitations:** Model scores in this exercise should be checked with a separate validation/test workflow before treating them as estimates for a real bank.
